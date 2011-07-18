@@ -35,14 +35,16 @@ setopt hist_ignore_dups     # ignore duplication command history list
 setopt share_history        # share command history data
 
 ## ALIAS ##
+# for coreutils
+source /usr/local/Cellar/coreutils/8.12/aliases
 alias mvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/MacVim "$@"'
 alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias grep='grep -n "$@"'
 alias be='bundle exec "$@"'
 alias gd='dirs -v; echo -n "select number: "; read newdir; cd -"$newdir"'
-#alias ls='ls -F --color=auto'
-#alias ll='ls -la --color=auto'
-#alias la='ls -a --color=auto'
+alias ls='/usr/local/bin/gls -F --color=auto'
+alias ll='/usr/local/bin/gls -la --color=auto'
+alias la='/usr/local/bin/gls -a --color=auto'
 
 ## PROXY SETTING ##
 #export HTTP_PROXY=http://
