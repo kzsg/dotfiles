@@ -1,0 +1,7 @@
+"color molokai
+color dusk
+set transparency=15
+set guioptions=aAce
+set lines=50 columns=150
+set lsp=1
+set guifont=Osaka一等幅:h10

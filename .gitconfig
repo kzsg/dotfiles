@@ -1,0 +1,43 @@
+[user]
+	name = Kazushige MORIMOTO
+	email = kzsg@kzsg.jp
+[difftool "Kaleidoscope"]
+  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+  prompt = false
+[diff]
+  tool = Kaleidoscope
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+  interactive = auto
+[alias]
+  st = status
+  ad = add
+  l = log
+  ls = log --stat
+  lr = log --reverse
+  lg = log --graph
+  lgo = log --graph --oneline
+  lp = log -p --stat
+  lpr = log -p --stat --reverse
+  b = branch -a
+  co = checkout
+  ci = commit -v
+  ca = commit -v --amend
+  s = show
+  br = branch
+  ds = diff --staged
+  dn = diff --name-only
+  pr = pull --rebase
+  st = status
+  svd = svn dcommit
+  svf = svn fetch
+  svr = svn rebase
+  serve = daemon --export-all --base-path=. --base-path-relaxed
+  in = !sh -c 'git log ..origin/${1:-master}'
+  out = !sh -c 'git log origin/${1:-master}..' -
+
+[core]
+	excludesfile = /Users/kzsg/.gitignore
