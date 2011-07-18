@@ -36,6 +36,7 @@ setopt share_history        # share command history data
 
 ## ALIAS ##
 alias mvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/MacVim "$@"'
+alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias grep='grep -n "$@"'
 alias be='bundle exec "$@"'
 alias gd='dirs -v; echo -n "select number: "; read newdir; cd -"$newdir"'
@@ -46,13 +47,11 @@ alias gd='dirs -v; echo -n "select number: "; read newdir; cd -"$newdir"'
 ## PROXY SETTING ##
 #export HTTP_PROXY=http://
 
-## PATH ##
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin:$HOME/bin
-export PATH=$PATH:/Applications/android-sdk-mac_x86/tools
-
 ## ENV ##
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin:$HOME/bin
+export PATH=$PATH:/Applications/android-sdk-mac_x86/tools
 
 # dircolors
 #eval `dircolors ~/.dir_colors -b`
