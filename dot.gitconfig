@@ -1,6 +1,6 @@
 [user]
-	name = Kazushige MORIMOTO
-	email = kzsg@kzsg.jp
+  name = Kazushige MORIMOTO
+  email = kzsg@kzsg.jp
 [difftool "Kaleidoscope"]
   cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool]
@@ -40,4 +40,4 @@
   out = !sh -c 'git log origin/${1:-master}..' -
 
 [core]
-	excludesfile = /Users/kzsg/.gitignore
+	excludesfile = ~/.gitignore
