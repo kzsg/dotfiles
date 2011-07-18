@@ -55,6 +55,6 @@ export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin:$HOME/bin
 export PATH=$PATH:/Applications/android-sdk-mac_x86/tools
 
-# dircolors
-#eval `dircolors ~/.dir_colors -b`
+## DIRCOLORS ##
+eval `dircolors ~/.dir_colors -b`
 
