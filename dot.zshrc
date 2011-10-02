@@ -18,11 +18,18 @@ local GRAY=$'%{\e[1;33m%}'
 local HOSTNAME=`hostname`
 
 ## PROMPT ##
+#PROMPT="
+# ${BLUE}%~${DEFAULT} ${vcs_info_msg_0_} %(v|%F{green}%1v%f|)
+# ${BLUE}${HOSTNAME%%.*} %(!.#.$) "
+#
+#PROMPT2='[%n]> ' 
+
 #PROMPT="${GREEN}${USERNAME}${DEFAULT} @${BLUE}${HOSTNAME##-*}${DEFAULT} %(!.#.$) "
 PROMPT="${GREEN}${USERNAME}${DEFAULT} @${BLUE}${HOSTNAME%%.*}${DEFAULT} %(!.#.$) "
 RPROMPT="[${BLUE}%~${DEFAULT}] ${vcs_info_msg_0_} $ %(v|%F{green}%1v%f|)"
 #PROMPT="%/%% "
-PROMPT2="%_%% "
+#PROMPT2="%_%% "
+#PROMPT2="[${BLUE}%~${DEFAULT}] ${vcs_info_msg_0_} $ %(v|%F{green}%1v%f|)"
 SPROMPT="%r is correct? [n,y,a,e]: "
 setopt PROMPT_SUBST
 setopt autopushd
@@ -38,7 +45,7 @@ setopt share_history        # share command history data
 # for coreutils
 source /usr/local/Cellar/coreutils/8.12/aliases
 alias mvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/MacVim "$@"'
-alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+alias vim='/usr/local/bin/vim "$@"'
 alias grep='grep -n "$@"'
 alias be='bundle exec "$@"'
 alias gd='dirs -v; echo -n "select number: "; read newdir; cd -"$newdir"'
@@ -50,10 +57,10 @@ alias la='/usr/local/bin/gls -a --color=auto'
 #export HTTP_PROXY=http://
 
 ## ENV ##
-if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
-export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+export EDITOR=/usr/local/bin/vim
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin:$HOME/bin
-export PATH=$PATH:/Applications/android-sdk-mac_x86/tools
+
 
 ## DIRCOLORS ##
 eval `dircolors ~/.dir_colors -b`
