@@ -1,8 +1,14 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/vundle.git/
+"color dusk
+set nu
+set lsp=1 "行間隔
+
+" Bundle
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+Bundle 'gmarik/vundle'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
 Bundle 'thinca/vim-ref'
@@ -12,9 +18,22 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-cucumber'
 filetype plugin indent on
 
-set nu
 
-nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+let mapleader = ","
+map <silent> <F2> :bp<cr>
+map <silent> <F3> :bn<cr>
+map <silent> <F4> :CommandT<CR>
+map <silent> <F5> :CommandTBuffer<CR>
+map <Esc><Esc> :nohlsearch<CR><Esc>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+nnoremap j gj
+nnoremap k gk
+
+
+"nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
 " ファイル一覧
 " nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 " " レジスタ一覧
