@@ -4,6 +4,7 @@ filetype off
 "color dusk
 set nu
 set lsp=1 "行間隔
+set noswapfile
 
 " Bundle
 set rtp+=~/.vim/bundle/vundle/
