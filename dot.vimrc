@@ -3,6 +3,7 @@ filetype off
 
 "color dusk
 set nu
+set tw=0
 set lsp=1 "行間隔
 set noswapfile
 
