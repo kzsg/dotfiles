@@ -17,6 +17,7 @@ local DEFAULT=$'%{\e[1;m%}'
 local GRAY=$'%{\e[1;33m%}'
 local HOSTNAME=`hostname`
 
+
 ## PROMPT ##
 #PROMPT="
 # ${BLUE}%~${DEFAULT} ${vcs_info_msg_0_} %(v|%F{green}%1v%f|)
@@ -41,6 +42,15 @@ SAVEHIST=10000
 setopt hist_ignore_dups     # ignore duplication command history list
 setopt share_history        # share command history data
 
+## ENV ##
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+export EDITOR=/usr/local/bin/vim
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin:$HOME/bin
+
+## PROXY SETTING ##
+#export HTTP_PROXY=http://
+
+
 ## ALIAS ##
 # for coreutils
 source /usr/local/Cellar/coreutils/8.12/aliases
@@ -53,15 +63,6 @@ alias ls='/usr/local/bin/gls -F --color=auto'
 alias ll='/usr/local/bin/gls -la --color=auto'
 alias la='/usr/local/bin/gls -a --color=auto'
 
-## PROXY SETTING ##
-#export HTTP_PROXY=http://
-
-## ENV ##
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-export EDITOR=/usr/local/bin/vim
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin:$HOME/bin
-
 
 ## DIRCOLORS ##
 eval `dircolors ~/.dir_colors -b`
-
