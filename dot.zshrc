@@ -46,14 +46,13 @@ setopt share_history        # share command history data
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 export EDITOR=/usr/local/bin/vim
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin:$HOME/bin
+export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 ## PROXY SETTING ##
 #export HTTP_PROXY=http://
 
-
 ## ALIAS ##
 # for coreutils
-source /usr/local/Cellar/coreutils/8.12/aliases
 alias mvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/MacVim "$@"'
 alias vim='/usr/local/bin/vim "$@"'
 alias grep='grep -n "$@"'
