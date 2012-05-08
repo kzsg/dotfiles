@@ -6,6 +6,8 @@ set nu
 set tw=0
 set lsp=1 "行間隔
 set noswapfile
+set backspace=2
+set whichwrap=b,s,[,],<,>
 
 " Bundle
 set rtp+=~/.vim/bundle/vundle/
