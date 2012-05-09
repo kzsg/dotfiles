@@ -45,7 +45,8 @@ setopt share_history        # share command history data
 ## ENV ##
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 export EDITOR=/usr/local/bin/vim
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin:$HOME/bin
+export ANDROID_SDK_HOME=$HOME/android-sdks
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin:$HOME/bin:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 ## PROXY SETTING ##
