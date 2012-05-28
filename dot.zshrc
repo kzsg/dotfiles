@@ -24,10 +24,14 @@ local HOSTNAME=`hostname`
 # ${BLUE}${HOSTNAME%%.*} %(!.#.$) "
 #
 #PROMPT2='[%n]> ' 
+PROMPT="
+%n ${BLUE}%~${DEFAULT} ${vcs_info_msg_0_} %(v|%F{green}%1v%f|)
+$ "
 
+PROMPT2='[%n]> '
 #PROMPT="${GREEN}${USERNAME}${DEFAULT} @${BLUE}${HOSTNAME##-*}${DEFAULT} %(!.#.$) "
-PROMPT="${GREEN}${USERNAME}${DEFAULT} @${BLUE}${HOSTNAME%%.*}${DEFAULT} %(!.#.$) "
-RPROMPT="[${BLUE}%~${DEFAULT}] ${vcs_info_msg_0_} $ %(v|%F{green}%1v%f|)"
+#PROMPT="${GREEN}${USERNAME}${DEFAULT} @${BLUE}${HOSTNAME%%.*}${DEFAULT} %(!.#.$) "
+#RPROMPT="[${BLUE}%~${DEFAULT}] ${vcs_info_msg_0_} $ %(v|%F{green}%1v%f|)"
 #PROMPT="%/%% "
 #PROMPT2="%_%% "
 #PROMPT2="[${BLUE}%~${DEFAULT}] ${vcs_info_msg_0_} $ %(v|%F{green}%1v%f|)"
