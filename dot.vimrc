@@ -1,4 +1,5 @@
 set nocompatible
+filetype off
 filetype plugin indent on
 syntax on
 
@@ -19,7 +20,7 @@ set softtabstop=2
 set shiftwidth=2
 
 " Bundle
-set rtp+=~/.vim/vundle.git
+set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'wincent/Command-T'
