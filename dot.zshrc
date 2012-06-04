@@ -26,7 +26,7 @@ local HOSTNAME=`hostname`
 #PROMPT2='[%n]> ' 
 PROMPT="
 %n ${BLUE}%~${DEFAULT} ${vcs_info_msg_0_} %(v|%F{green}%1v%f|)
-$ "
+${HOST%%.*} $ "
 
 PROMPT2='[%n]> '
 #PROMPT="${GREEN}${USERNAME}${DEFAULT} @${BLUE}${HOSTNAME##-*}${DEFAULT} %(!.#.$) "
@@ -63,9 +63,9 @@ alias vim='/usr/local/bin/vim "$@"'
 alias grep='grep -n "$@"'
 alias be='bundle exec "$@"'
 alias gd='dirs -v; echo -n "select number: "; read newdir; cd -"$newdir"'
-alias ls='/usr/local/bin/gls -F --color=auto'
-alias ll='/usr/local/bin/gls -la --color=auto'
-alias la='/usr/local/bin/gls -a --color=auto'
+alias ls='ls -F --color=auto'
+alias ll='ls -la --color=auto'
+alias la='ls -a --color=auto'
 
 
 ## DIRCOLORS ##
