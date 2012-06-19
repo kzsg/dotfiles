@@ -58,7 +58,6 @@ export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 ## ALIAS ##
 # for coreutils
-alias mvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/MacVim "$@"'
 alias vim='/usr/local/bin/vim "$@"'
 alias grep='grep -n "$@"'
 alias be='bundle exec "$@"'
