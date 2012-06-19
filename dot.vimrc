@@ -3,6 +3,10 @@ filetype off
 filetype plugin indent on
 syntax on
 
+"" statuslineの設定
+set statusline=%F%m%r%h%w\%=[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[LOW=%l/%L]
+set laststatus=2
+
 "" vimの文字列補完機能を使った際のPOPUP色設定
 hi Pmenu ctermbg=0
 hi PmenuSel ctermbg=1
