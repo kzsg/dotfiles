@@ -65,7 +65,11 @@ alias gd='dirs -v; echo -n "select number: "; read newdir; cd -"$newdir"'
 alias ls='ls -F --color=auto'
 alias ll='ls -la --color=auto'
 alias la='ls -a --color=auto'
+alias bi='bundle install'
+alias be='bundle exec'
 
+## for ant
+#export ANT_OPTS=-Dfile.encoding=UTF-8
 
 ## DIRCOLORS ##
 eval `dircolors ~/.dir_colors -b`
