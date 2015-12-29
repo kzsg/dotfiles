@@ -1,6 +1,6 @@
 [user]
-	name = Kazushige Morimoto
-	email = kzsg@kzsg.jp
+  name = Kazushige Morimoto
+  email = kzsg@kzsg.jp
 [difftool "Kaleidoscope"]
   cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool]
@@ -40,12 +40,19 @@
   out = !sh -c 'git log origin/${1:-master}..' -
 
 [core]
-  excludesfile = ${HOME}/.gitignore_global
+  excludesfile = /Users/kzsg/.gitignore_global
   pager = lv -Ou8 -c
   quotepath = false
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
 [mergetool "sourcetree"]
   cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
   trustExitCode = true
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true

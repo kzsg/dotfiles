@@ -23,17 +23,37 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 
-" Bundle
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'wincent/Command-T'
-Bundle 'Shougo/neocomplcache'
-Bundle "Shougo/neocomplcache-snippets-complete"
-Bundle 'thinca/vim-ref'
-Bundle 'thinca/vim-quickrun'
-Bundle 'ruby.vim'
-Bundle 'tpope/vim-fugitive'
+
+"" NeoBundle
+set runtimepath+=~/.vim/bundle/neobundle.vim/
+call neobundle#rc(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+NeoBundle 'vim-scripts/vim-auto-save'
+NeoBundle 'kannokanno/previm'
+"NeoBundle 'syui/cscroll.vim'
+"NeoBundle 'kana/vim-submode'
+
+filetype plugin indent on
+NeoBundleCheck
+
+nnoremap <silent> <F7> :PrevimOpen<CR>
+
+
+
+
+"" Bundle
+"set rtp+=~/.vim/bundle/vundle
+"call vundle#rc()
+"Bundle 'gmarik/vundle'
+"Bundle 'wincent/Command-T'
+"Bundle 'Shougo/neocomplcache'
+"Bundle "Shougo/neocomplcache-snippets-complete"
+"Bundle 'thinca/vim-ref'
+"Bundle 'thinca/vim-quickrun'
+"Bundle 'ruby.vim'
+"Bundle 'tpope/vim-fugitive'
 
 " for snipmate
 "Bundle "MarcWeber/vim-addon-mw-utils"

@@ -48,17 +48,18 @@ setopt share_history        # share command history data
 
 ## ENV ##
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-export EDITOR=/usr/local/bin/vim
-export ANDROID_SDK_HOME=$HOME/android-sdks
+export EDITOR=/usr/local/Cellar/vim/7.4.161/bin/vim
+export ANDROID_SDK_HOME=$HOME/Library/android-sdks
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin:$HOME/bin:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+export PATH="$HOME/.rbenv/bin:$PATH"
 
 ## PROXY SETTING ##
 #export HTTP_PROXY=http://
 
 ## ALIAS ##
 # for coreutils
-alias vim='/usr/local/bin/vim "$@"'
+alias vim='/usr/local/Cellar/vim/7.4.161/bin/vim "$@"'
 alias grep='grep -n "$@"'
 alias be='bundle exec "$@"'
 alias gd='dirs -v; echo -n "select number: "; read newdir; cd -"$newdir"'
@@ -73,3 +74,5 @@ alias be='bundle exec'
 
 ## DIRCOLORS ##
 eval `dircolors ~/.dir_colors -b`
+
+eval "$(rbenv init - zsh)"
